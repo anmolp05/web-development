@@ -1,0 +1,490 @@
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(180deg,#a29e87, #f8e3d0);
+    background-attachment: fixed;
+  }
+  html {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 5%;
+    height: 60px;
+    background-color: #2b9098;
+    background-image: linear-gradient(to top, #2b9098, #fff);
+  }
+  
+  nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding-top: 2px;
+  }
+  
+  nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav .links li {
+    list-style: none;
+  }
+  
+  nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav .contact:hover,
+  nav .links a:hover {
+    background: #fff;
+    color: #2b9098;
+    background-image: linear-gradient(to bottom, #2b9098, #fff);
+  }
+  nav .contact:hover {
+    color: #44e839 !important;
+  }
+  
+  nav .links a:hover {
+    border-radius: 20vh;
+  }
+  #nav-toggle {
+    position: absolute;
+    top: -100px;
+  }
+  
+  nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav .contact {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 25px;
+    border: 0px #2b9098;
+    background-color: #2b9098;
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-image: linear-gradient(to top, #2b9098, #fff);
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav .logo {
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+  
+    nav .links {
+      float: none;
+      position: fixed;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      top: 100px;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    nav .links a {
+      font-size: 20px;
+    }
+  
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+  
+    nav .icon-burger {
+      display: block;
+    }
+  
+    nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+    }
+  
+    nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+    }
+  
+    nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+    }
+  }
+  
+  /* header completed */
+  
+  /* top and bottom button */
+  
+  .scroll_but {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    padding: 10px;
+    display: block;
+    background: #000;
+    text-align: center;
+    line-height: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 10000;
+  }
+  .scroll_but.top {
+    border-radius: 50%;
+    top: calc(50% - 40%);
+    background: #44e839;
+    background-image: linear-gradient(to bottom, #44e839, #fff);
+  }
+  .scroll_but.bottom {
+    border-radius: 50%;
+    top: calc(50% + 42%);
+    background: #f53d68;
+    background-image: linear-gradient(to top, #f53d68, #fff);
+  }
+  
+  /* scroll top and bottom completed */
+  
+  
+  html::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #2b9098 0,
+      #2b9098 1px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 5px 5px;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: inset 1px 1px 5px black;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    border-radius: 5px;
+    border: 3.5px solid black;
+    box-shadow: inset 1px 1px 5px black;
+  }
+  
+  /* custom scroll bar completed */
+  
+  .text1 {
+    text-align: center;
+    padding: 32px;
+  }
+  .container-pic {
+    width: 1280px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .container-pic .box-pic {
+    position: relative;
+    width: 400px;
+    height: 267px;
+    margin: 10px;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  
+  .box-pic img {
+    max-width: 100%;
+  }
+  
+  .container-pic .box-pic .overlay-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #2b909833;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: scaleY(0);
+  }
+  
+  .container-pic .box-pic:hover .overlay-pic {
+    transform: scaleY(1);
+  }
+  
+  .container-pic .box-pic .overlay-pic .text-pic {
+    position: absolute;
+    padding: 0;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .container-pic .box-pic .overlay-pic .text-pic h2 {
+    text-align: left;
+    color: #fff;
+    font-size: medium;
+  }
+  .container-pic .box-pic .overlay-pic .text-pic p {
+    color: #fff;
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .container-pic {
+      justify-content: center;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .container-pic .box-pic .overlay-pic {
+      bottom: 15%;
+    }
+  }
+  /* responsive gallery completed*/
+  
+  
+  /* Footer */
+  .content1 {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #2b9098;
+    background-image: linear-gradient(to bottom, #2b9098, #fff);
+  }
+  .main-content {
+    display: flex;
+  }
+  .main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+  }
+  .box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+  }
+  .box .content:before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .box .content:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 15%;
+    background: #e7d662;
+    top: -10px;
+  }
+  .left .content p {
+    text-align: justify;
+  }
+  .left .content .social {
+    margin: 20px 0 0 0;
+  }
+  .left .content .social a {
+    padding: 0 2px;
+  }
+  .left .content .social a span {
+    color: grey;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .left .content .social a span:hover {
+    background: #e7d662;
+  }
+  .center .content .fas {
+    color: grey;
+    font-size: 1.4375rem;
+    background: #fff;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .center .content .fas:hover {
+    background: #e7d662;
+  }
+  .center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .center .content .phone {
+    margin: 15px 0;
+  }
+  .right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+  }
+  .right form .msg {
+    margin-top: 10px;
+  }
+  .right form input,
+  .right form textarea {
+    color: #fff;
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+    caret-color: red;
+  }
+  .right form input:focus,
+  .right form textarea:focus {
+    outline-color: #3498db;
+  }
+  .right form input {
+    height: 35px;
+  }
+  .right form .btn {
+    margin-top: 10px;
+  }
+  .right form .btn button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #38c4c4, #42e9e9);
+    box-shadow: 7px -7px 21px #288c8c, -7px 7px 21px #54ffff;
+  }
+  .right form .btn button:hover {
+    border-radius: 16px;
+    background: linear-gradient(225deg, #38c4c4, #42e9e9);
+    box-shadow: -7px 7px 21px #288c8c, 7px -7px 21px #54ffff;
+  }
+  .bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+  }
+  .bottom center span {
+    color: #656565;
+  }
+  .bottom center a {
+    color: #e7d662;
+    text-decoration: none;
+  }
+  .bottom center a:hover {
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+    footer {
+      position: relative;
+      bottom: 0px;
+    }
+    .main-content {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .main-content .box {
+      margin: 5px 0;
+    }
+  }
+  .book button {
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-left: 50%;
+    height: 40px;
+    width: 50%;
+    border: none;
+    outline: none;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #38c4c4, #42e9e9);
+    box-shadow: 7px -7px 21px #288c8c, -7px 7px 21px #54ffff;
+  }
+ .book button:hover {
+    border-radius: 16px;
+    background: linear-gradient(225deg, #38c4c4, #42e9e9);
+    box-shadow: -7px 7px 21px #288c8c, 7px -7px 21px #54ffff;
+  }
