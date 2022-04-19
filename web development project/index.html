@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>  
@@ -94,7 +94,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -128,7 +128,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
         <!-- change type to submit -->
       </div>
     </div>
@@ -145,7 +145,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -162,7 +162,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -179,7 +179,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
         <!-- change type to submit -->
       </div>
     </div>  
@@ -196,7 +196,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -213,7 +213,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
         <!-- change type to submit -->
       </div>
     </div>
@@ -230,7 +230,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -247,7 +247,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -264,7 +264,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -281,7 +281,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
         <!-- change type to submit -->
       </div>
     </div>  
@@ -298,7 +298,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -315,7 +315,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -332,7 +332,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -349,7 +349,7 @@
         </div>
       </div>
       <div class="book">
-        <button type="submit" value="submit">Book Ticket</button> 
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
         <!-- change type to submit -->
       </div>
     </div>
@@ -421,5 +421,25 @@
   </footer>
 
   <div id="finish"></div>
+
+  <script>
+    let i = 0;
+      let placeholder = "";
+	    let msgholder = "";
+	    const txt = "email@domain.com";
+	    const pss = "Type any message"
+	    const speed = 100;
+
+	    function type(){
+    	  placeholder += txt.charAt(i);
+		    msgholder += pss.charAt(i);
+    	  document.getElementById("email-id").setAttribute("placeholder",placeholder);
+		    document.getElementById("message").setAttribute("placeholder",msgholder);
+    	  i++;
+    	  setTimeout(type,speed);
+	    }
+
+	    setTimeout(type, speed*10);
+</script>
 </body>
 </html>

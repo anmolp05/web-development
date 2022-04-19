@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="shortcut icon" href="https://i.dlpng.com/static/png/6876736_preview.png" type="image/x-icon">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2b9098" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2b9098">
+  <!-- IOS safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
+  </head>
+  <body>
+    <form class="signup-form" >
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Book Ticket</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" class="form-input" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="email" class="label-title">Email*</label>
+            <input type="email" id="email" class="form-input" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="phone" class="label-title">Phone*</label>
+            <input type="phone" id="phone" class="form-input" required="required">
+          </div>
+        </div>
+
+
+        <!-- Gender and Hobbies -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="Male" id="male" checked> Male</label>
+              <label for="female"><input type="radio" name="gender" value="Female" id="female"> Female</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Ticket</label>
+            <div >
+              <label><input type="checkbox" name="ticket1" value="RedFort" checked>Red Fort</label>
+              <label><input type="checkbox" name="ticket1" value="Museum">Museum</label>
+              <label><input type="checkbox" name="ticket1" value="TouristGuide">Tourist Guide</label>
+              <label><input type="checkbox" name="ticket1" value="WheelChair">Wheelchair</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nationality and visit date -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="nationality" class="label-title">Select Nationality</label>
+            <div class="input-group">
+              <label for="indian"><input type="radio" name="nationality" value="Indian" id="indian" checked> Indian</label>
+              <label for="foreigner"><input type="radio" name="nationality" value="Foreigner" id="foreigner"> Foreigner</label>
+            </div>
+          </div>
+          <div class="form-group right" >
+            <label class="label-title">Visit Date*</label>
+            <input type="date" name="startDate" id="startDate" value="" required>
+          </div>
+        </div>
+          
+        <!-- proof and proof id -->
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label for="proof" class="label-title">Proof</label>
+            <select class="form-input" id="level">
+              <option value="DrivingLicence">Driving Licence</option>
+              <option value="PanCard">Pan Card</option>
+              <option value="VoterID">Voter Id</option>
+            </select>
+          </div>
+          <div class="form-group right">
+            <label for="proof-id" class="label-title">Proof Id*</label>
+            <input type="text" class="form-input" id="proofID" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn" onclick="createTicket()">Create</button>
+      </div>
+
+    </form>
+
+    <div class="bottom">
+      <center>
+        <span class="credit">Created By <a href="#">Tech Army</a> | </span>
+        <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>
+      </center>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      let i = 0;
+      let firstholder = "";
+    let lastholder = "";
+    let emailholder = "";
+    let phoneholder = "";
+    let idholder = "";
+    const first = "John";
+    const last = "Doe";
+    const email = "email@domain.com";
+    const phone = "+911111111111"
+    const id = "ABCDE12345"
+    const speed = 100;
+
+    function type(){
+      firstholder += first.charAt(i);
+      lastholder += last.charAt(i);
+      emailholder += email.charAt(i);
+      phoneholder += phone.charAt(i);
+      idholder += id.charAt(i);
+      document.getElementById("firstname").setAttribute("placeholder",firstholder);
+      document.getElementById("lastname").setAttribute("placeholder",lastholder);
+      document.getElementById("email").setAttribute("placeholder",emailholder);
+      document.getElementById("phone").setAttribute("placeholder",phoneholder);
+      document.getElementById("proofID").setAttribute("placeholder",idholder);
+      i++;
+      setTimeout(type,speed);
+    }
+
+    setTimeout(type, speed*10)
+  </script>
+  </body>
+</html>
