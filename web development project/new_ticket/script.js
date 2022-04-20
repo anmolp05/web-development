@@ -16,7 +16,21 @@ function createTicket() {
            ticket.push(checkboxes[i].value);
         }
     }
-    
+    if(!firstName || !email || !phone || !visitDate || !proofID){
+        alert("Fill all the Required Details");
+        return false;
+    }
+    var qrdata = "Name : " + firstName +
+                    " " + lastName + 
+                    " Email : " + email + 
+                    " Phone : " + phone +
+                    " Gender : " + gender +
+                    " Ticket : " + ticket +
+                    " Nationality : " + nationality +
+                    " Visit Date : " + visitDate +
+                    " Proof : " + proof +
+                    " Proof ID : " + proofID;
+    var qrImgLink = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrdata;
     let myText = 
             `<html>
                 <head>
@@ -47,6 +61,7 @@ function createTicket() {
                 ${ visitDate } <br>
                 ${ proof }      :     
                 ${ proofID } <br>
+                <img src="${ qrImgLink }" alt="QRCode"><br><br><br>
                 <input type='button' class='btn' id='download' name='download' value='Download' onclick='window.print()' />
                 </body>
                 </html>`;
