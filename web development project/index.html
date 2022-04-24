@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
   <meta charset="utf-8">
@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Army</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="shortcut icon" href="https://i.dlpng.com/static/png/6876736_preview.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="media/image/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#2b9098" />
@@ -21,11 +20,11 @@
     <!-- header -->
   <nav>
     <input id="nav-toggle" type="checkbox">
-    <div class="logo"><img src="https://i.dlpng.com/static/png/6876736_preview.png" alt="Logo" height="100" width="100"></div>
+    <div class="logo"><img src="media/image/logo.png" alt="Logo" height="100" width="100"></div>
     <ul class="links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#login">Login</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -45,34 +44,170 @@
   <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
   <a href="#finish" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
 
+  <div id="selectbox">
+    <!-- <div id="selectboxarea"> -->
+    <!-- <div class="style-box" id="select-state"> -->
+    <!-- <label for="state-name">Choose a State:</label> -->
+    <div>
+        <select name="select-state" class="select" id="select-state" type="text"
+            onchange="makeSubmenu(this.value)">
+            <option disabled="true"selected="">Select State</option>
+            <option >andhrapradesh</option>
+            <option>assam</option>
+            <option>bihar</option>
+            <option>chhattisgarh</option>
+            <option>delhi</option>
+            <option>gujarat</option>
+            <option>haryana</option>
+            <option>himachal-pradesh</option>
+            <option>jammu-and-kashmir</option>
+            <option>karnataka</option>
+            <option>kerala</option>
+            <option>madhya-pradesh</option>
+            <option>Maharashtra</option>
+            <option>manipur</option>
+            <option>mizoram</option>
+            <option>odisha</option>
+            <option>punjab</option>
+            <option>rajasthan</option>
+            <option>tamil-nadu</option>
+            <option>telangana</option>
+            <option>uttar-pradesh</option>
+            <option>uttarakhand</option>
+            <option>west-bengal</option>
+        </select>
+        <!-- </div>   -->
+
+        <!-- </div>
+            <div class="style-box" id="city-name"> -->
+        <!-- <div> -->
+        <select type="text" name="select-city" class="select" id="select-city"
+            onchange="navigateToCityList(this.value)">
+
+            <option selected="" disabled="true">Select City</option>
+            <option>agra</option>
+            <option>akola</option>
+            <option>amravati</option>
+            <option>aurangabad</option>
+            <option>bageshwar</option>
+            <option>balrampur</option>
+            <option>bekal</option>
+            <option>bellary</option>
+            <option>belur-halebedu</option>
+            <option>bengaluru</option>
+            <option>bhagalpur</option>
+            <option>bharatpur</option>
+            <option>bhopal</option>
+            <option>bhubaneswar</option>
+            <option>bidar</option>
+            <option>bijapur</option>
+            <option>chanderi</option>
+            <option>chennai</option>
+            <option>chikhaldara</option>
+            <option>chitradurga</option>
+            <option>chittoor</option>
+            <option>chittorgarh</option>
+            <option>dhanushkodi</option>
+            <option>dholavira</option>
+            <option>dindigul</option>
+            <option>faridabad</option>
+            <option>fatehpur-sikri</option>
+            <option>gadag</option>
+            <option>ghazipur</option>
+            <option>gingee</option>
+            <option>guntur</option>
+            <option>guwahati</option>
+            <option>gwalior</option>
+            <option>halebidu</option>
+            <option>hanumangarh</option>
+            <option>hassan</option>
+            <option>hyderabad</option>
+            <option>jaunpur</option>
+            <option>jhansi</option>
+            <option>junagadh</option>
+            <option>junnar</option>
+            <option>kangra</option>
+            <option>kanpur</option>
+            <option>kevadiya</option>
+            <option>khajuraho</option>
+            <option>kochi</option>
+            <option>konark</option>
+            <option>kumbalgarh</option>
+            <option>ladakh</option>
+            <option>lahaul-spiti</option>
+            <option>leh</option>
+            <option>lonavala</option>
+            <option>lothal</option>
+            <option>lucknow</option>
+            <option>mahabalipuram</option>
+            <option>mahasamund</option>
+            <option>majuli-island</option>
+            <option>malana</option>
+            <option>manali</option>
+            <option>mandu</option>
+            <option>mawlynnong</option>
+            <option>medak</option>
+            <option>modhera</option>
+            <option>mumbai</option>
+            <option>murshidabad</option>
+            <option>nalanda</option>
+            <option>nashik</option>
+            <option>patan</option>
+            <option>patna</option>
+            <option>pavagadh</option>
+            <option>pudukkottai</option>
+            <option>pulwama</option>
+            <option>pune</option>
+            <option>puri</option>
+            <option>raigad</option>
+            <option>ratnagiri</option>
+            <option>ropar</option>
+            <option>sanchi</option>
+            <option>sarnath</option>
+            <option>sawai-madhopur</option>
+            <option>sholapur</option>
+            <option>siddharth-nagar</option>
+            <option>sivasagar</option>
+            <option>srirangapatna</option>
+            <option>trichy</option>
+            <option>udhampur</option>
+            <option>varanasi</option>
+            <option>vidisha</option>
+            <option>warangal</option>
+        </select>
+    </div>
+    <div id="google_translate_element"></div>
+</div>
   <!-- Photo Grid -->
   <div class="container-pic"> 
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2440021/pexels-photo-2440021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/taj mahal.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            The only way to do great work is to love what you do.
+            Taj Mahal <br>
+            Agra
           </h2>
           <p>
-            -Steve Jobs
+            ₹20
           </p>
         </div>
       </div>
       <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
+        <a href="monument_info/monumentInfo.html"><button type="submit" value="submit">View Information</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2923595/pexels-photo-2923595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/Ajanta caves.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            What you do today can improve all your tomorrows.
+            Ajanta Caves <br>
+            Aurangabad
           </h2>
           <p>
-            -Ralph Marston
+            ₹25
           </p>
         </div>
       </div>
@@ -82,14 +217,15 @@
       </div>
     </div>  
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/ellora caves.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Some people dream of great accomplishments, while others stay awake and do them.
+            Ellora Caves <br>
+            Aurangabad
           </h2>
           <p>
-            -Danielle Luedtke
+            ₹30
           </p>
         </div>
       </div>
@@ -99,14 +235,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/jantar Mantar.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Those who dare to fail miserably can achieve greatly.
+            Jantar Mantar <br>
+            New Delhi
           </h2>
           <p>
-            -John F. Kennedy
+            ₹20
           </p>
         </div>
       </div>
@@ -116,14 +253,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/kajuraho.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Only those who will risk going too far can possibly find out how far one can go.
+            Khajuraho <br>
+            Chatarpur
           </h2>
           <p>
-            -T. S. Eliot
+            ₹30
           </p>
         </div>
       </div>
@@ -133,14 +271,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/qutub minar1.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Success is the sum of small efforts, repeated day in and day out.
+            Qutub Minar <br>
+            New Delhi
           </h2>
           <p>
-            -Robert Collier
+            ₹25
           </p>
         </div>
       </div>
@@ -150,14 +289,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2440021/pexels-photo-2440021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/Red fort.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            The only way to do great work is to love what you do.
+            Red Fort <br>
+            New Delhi
           </h2>
           <p>
-            -Steve Jobs
+            ₹25
           </p>
         </div>
       </div>
@@ -167,116 +307,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2923595/pexels-photo-2923595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/statue of unity.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            What you do today can improve all your tomorrows.
+            Statue of Unity <br>
+            Kevadia
           </h2>
           <p>
-            -Ralph Marston
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
-        <!-- change type to submit -->
-      </div>
-    </div>  
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            Some people dream of great accomplishments, while others stay awake and do them.
-          </h2>
-          <p>
-            -Danielle Luedtke
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
-        <!-- change type to submit -->
-      </div>
-    </div>
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            Those who dare to fail miserably can achieve greatly.
-          </h2>
-          <p>
-            -John F. Kennedy
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
-        <!-- change type to submit -->
-      </div>
-    </div>
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            Only those who will risk going too far can possibly find out how far one can go.
-          </h2>
-          <p>
-            -T. S. Eliot
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
-        <!-- change type to submit -->
-      </div>
-    </div>
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            Success is the sum of small efforts, repeated day in and day out.
-          </h2>
-          <p>
-            -Robert Collier
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
-        <!-- change type to submit -->
-      </div>
-    </div>
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2440021/pexels-photo-2440021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            The only way to do great work is to love what you do.
-          </h2>
-          <p>
-            -Steve Jobs
-          </p>
-        </div>
-      </div>
-      <div class="book">
-        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
-        <!-- change type to submit -->
-      </div>
-    </div>
-    <div class="box-pic">
-      <img src="https://images.pexels.com/photos/2923595/pexels-photo-2923595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
-      <div class="overlay-pic">
-        <div class="text-pic">
-          <h2>
-            What you do today can improve all your tomorrows.
-          </h2>
-          <p>
-            -Ralph Marston
+            ₹35
           </p>
         </div>
       </div>
@@ -286,14 +325,15 @@
       </div>
     </div>  
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/sun temple konark.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Some people dream of great accomplishments, while others stay awake and do them.
+            Sun Temple <br>
+            Konark
           </h2>
           <p>
-            -Danielle Luedtke
+            ₹30
           </p>
         </div>
       </div>
@@ -303,14 +343,51 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/taj mahal.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Those who dare to fail miserably can achieve greatly.
+            Taj Mahal <br>
+            Agra
           </h2>
           <p>
-            -John F. Kennedy
+            ₹20
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="monument_info/monumentInfo.html"><button type="submit" value="submit">View Information</button></a> 
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="media/image/Ajanta caves.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Ajanta Caves <br>
+            Aurangabad
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
+        <!-- change type to submit -->
+      </div>
+    </div>  
+    <div class="box-pic">
+      <img src="media/image/ellora caves.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Ellora Caves <br>
+            Aurangabad
+          </h2>
+          <p>
+            ₹30
           </p>
         </div>
       </div>
@@ -320,14 +397,15 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/jantar Mantar.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Only those who will risk going too far can possibly find out how far one can go.
+            Jantar Mantar <br>
+            New Delhi
           </h2>
           <p>
-            -T. S. Eliot
+            ₹20
           </p>
         </div>
       </div>
@@ -337,19 +415,92 @@
       </div>
     </div>
     <div class="box-pic">
-      <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%">
+      <img src="media/image/kajuraho.jpg" style="height: 100%; width:100%">
       <div class="overlay-pic">
         <div class="text-pic">
           <h2>
-            Success is the sum of small efforts, repeated day in and day out.
+            Khajuraho <br>
+            Chatarpur
           </h2>
           <p>
-            -Robert Collier
+            ₹30
           </p>
         </div>
       </div>
       <div class="book">
         <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="media/image/qutub minar1.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Qutub Minar <br>
+            New Delhi
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="media/image/Red fort.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Red Fort <br>
+            New Delhi
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="media/image/statue of unity.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Statue of Unity <br>
+            Kevadia
+          </h2>
+          <p>
+            ₹35
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>  
+    <div class="box-pic">
+      <img src="media/image/sun temple konark.jpg" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Sun Temple <br>
+            Konark
+          </h2>
+          <p>
+            ₹30
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="new_ticket/index.html"><button type="submit" value="submit">Book Ticket</button></a> 
         <!-- change type to submit -->
       </div>
     </div>
@@ -441,5 +592,13 @@
 
 	    setTimeout(type, speed*10);
 </script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script.js"></script>
 </body>
 </html>

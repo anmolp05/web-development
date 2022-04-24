@@ -36,8 +36,24 @@ function createTicket() {
                 <head>
                     <title>My Ticket</title>
                     <link rel='stylesheet' type='text/css' href='style.css'/>
+                    <style>
+                    html {
+                        height: 100%;
+                    }
+                    </style>
+                    <!-- Chrome, Firefox OS and Opera -->
+                    <meta name="theme-color" content="#2b9098" />
+                    <!-- Windows Phone -->
+                    <meta name="msapplication-navbutton-color" content="#2b9098">
+                    <!-- IOS safari -->
+                    <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
                 </head>
                 <body>
+                <center>
+                <h1>
+                Ticket
+                </h1>
+                </center>
                 `;
     // myText += `
     //         <div class='firstName'>

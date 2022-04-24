@@ -277,11 +277,11 @@
   .container-pic .box-pic .overlay-pic .text-pic h2 {
     text-align: left;
     color: #fff;
-    font-size: medium;
+    font-size: xx-large;
   }
   .container-pic .box-pic .overlay-pic .text-pic p {
     color: #fff;
-    text-align: right;
+    text-align: left;
   }
   
   @media screen and (max-width: 1300px) {
@@ -488,3 +488,28 @@
     background: linear-gradient(225deg, #38c4c4, #42e9e9);
     box-shadow: -7px 7px 21px #288c8c, 7px -7px 21px #54ffff;
   }
+  #selectbox {
+    margin-top: 10%;
+    display: flex;
+    /* background-color: rgb(250, 194, 179); */
+    justify-content: space-between;
+    /* box-shadow: 0 8px 8px -5px rgb(0 0 0 / 30%); */
+    border: 2px solid gainsboro;
+    /* overflow: hidden; */
+}
+
+#selectbox #select-state {
+    margin: 30px 0px 20px 50px;
+}
+
+#selectbox #select-city {
+    margin: 30px 20px 20px 50px;
+}
+
+#selectbox .select {
+    padding: 10px;
+    width: 200px;
+}
+#google_translate_element {
+  padding-top: 2%;
+}
