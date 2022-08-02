@@ -80,7 +80,7 @@
           </div>
           <div class="form-group right" >
             <label class="label-title">Visit Date*</label>
-            <input type="date" name="startDate" id="startDate" value="" required>
+            <input type="date" name="startDate" id="startDate" value="" required onkeydown="return false">
           </div>
         </div>
           
@@ -145,7 +145,25 @@
       setTimeout(type,speed);
     }
 
-    setTimeout(type, speed*10)
+    setTimeout(type, speed*10);
+
+    // disable previous date in javascript
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("startDate")[0].setAttribute('min', today);
+
+    // disable dates after 3 month in javascript
+    var future = new Date();
+    var dd = future.getDate();
+    var mm = future.getMonth()+4;
+    var yyyy = future.getFullYear();
+    if(dd<10){
+    dd='0'+dd
+    }
+    if(mm<10){
+      mm='0'+mm
+    }
+    future = yyyy+'-'+mm+'-'+dd;
+    document.getElementsByName("startDate")[0].setAttribute('max', future);
   </script>
   </body>
 </html>
