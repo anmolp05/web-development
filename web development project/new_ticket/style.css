@@ -6,7 +6,9 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
-    background-image: linear-gradient(180deg,#a29e87, #f8e3d0);
+    background-image: url(https://static.businessworld.in/article/article_extra_large_image/1587722852_0pILuE_travel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -16,7 +18,7 @@ body {
   /* margin:5% auto; */
   width: 100vh;
   margin: 2vh auto;
-  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  background:linear-gradient(#6ED5F0 0%, #C2E0ee 50%, #6eb5f0 99%);
   border-radius: 10px;
 }
 
@@ -24,7 +26,7 @@ body {
 /* Form Header */
 /*---------------------------------------*/
 .form-header  {
-  background-color: #EFF0F1;
+  background-color: #6cbbfc;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -32,9 +34,9 @@ body {
 .form-header h1 {
   font-size: 30px;
   text-align:center;
-  color:#666;
-  padding:20px 0;
-  border-bottom:1px solid #cccccc;
+  color:rgb (20,8,8),;
+  padding:20px;
+  border-bottom:1px solid #ae9393;
 }
 
 /*---------------------------------------*/
@@ -42,7 +44,7 @@ body {
 /*---------------------------------------*/
 .form-body {
   padding:10px 40px;
-  color:#666;
+  color:rgb(18,14,14);
 }
 
 .form-group{
@@ -92,19 +94,19 @@ body {
 /* Form Footer */
 /*---------------------------------------*/
 .signup-form .form-footer  {
-  background-color: #EFF0F1;
+  background-color: #6cb0f5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding:10px 40px;
   text-align: right;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #89aeef;
   clear:both;
 }
 
 .form-footer span {
   float:left;
   margin-top: 10px;
-  color:#999;  
+  color:rgb(20,20,20);  
   font-style: italic;
   font-weight: thin;
 }

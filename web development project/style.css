@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    background-image: linear-gradient(180deg,#a29e87, #f8e3d0);
+    background-image: linear-gradient(180deg,#e6f5ff, #e6f5ff);
     background-attachment: fixed;
   }
   html {
@@ -512,4 +512,11 @@
 }
 #google_translate_element {
   padding-top: 2%;
+}
+
+
+
+
+form{
+  padding:50px;
 }

@@ -35,7 +35,8 @@ function createTicket() {
             `<html>
                 <head>
                     <title>My Ticket</title>
-                    <link rel='stylesheet' type='text/css' href='style.css'/>
+                    
+                    <link rel='stylesheet' type='text/css' href='styleticket.css'/>
                     <style>
                     html {
                         height: 100%;
@@ -49,11 +50,7 @@ function createTicket() {
                     <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
                 </head>
                 <body>
-                <center>
-                <h1>
-                Ticket
-                </h1>
-                </center>
+                
                 `;
     // myText += `
     //         <div class='firstName'>
@@ -67,19 +64,61 @@ function createTicket() {
     // myText += `<div> 
     //               ${ email } 
     //               </div>`;
-    myText += ` ${ firstName }<br>
-                ${ lastName }<br>
-                ${ email }<br>
-                ${ phone }<br>
-                ${ gender } <br>
-                ${ ticket }<br>
-                ${ nationality }<br>
-                ${ visitDate } <br>
-                ${ proof }      :     
-                ${ proofID } <br>
-                <img src="${ qrImgLink }" alt="QRCode"><br><br><br>
-                <input type='button' class='btn' id='download' name='download' value='Download' onclick='window.print()' />
-                </body>
+    myText += ` <div class="parent">
+    <br>
+    <div class="child">
+    <header>
+    <img src="ministry.png" class="min">
+    <h2><b>E-Ticket for Taj Mahal</b></h2>
+    <h6>Ticket is Valid for one time use only</h6>
+    </header>
+    <hr><br>
+    <div class="name">
+    <div class="item"><b>Visitor's Name :</b> ${ firstName } ${ lastName } </div>
+    <div class="item"><b>Entry Fee :</b> Rs. 20 </div>
+    <div class="item"><b>Visitor Type :</b> ${ nationality }</div>
+    <div class="item"><b>Other Facilities :</b> ${ ticket }</div>
+    <div class="item"><b>email :</b> ${ email }</div>
+    <div class="item">
+        <img src="${ qrImgLink }" alt="QRCode" align="right" class = "qr">
+    </div>
+    </div>
+    <br><hr><br>
+    <h4>Validity</h4>
+    <br>
+    <div class="name">
+    <div class="item"><b>Date : ${ visitDate }</b></div>
+    <div class="item"><b>Time : 12:00 PM-6:00 PM</b></div>
+    </div>
+    <br><hr><br>
+    <h4>Ticket Type : Adult</h4>
+    <br>
+    <div class="name">
+    <div class="item"><b>Identity Type : ${ proof }</b></div>
+    <div class="item"><b>Identity No : ${ proofID }</b></div>
+    </div>
+    <br><hr><br>
+    <div class="ending">
+    <h3>Important Information</h3>
+    <br><br>
+    <ol type="1">
+        <li>The e-ticket is not transferable.</li>
+        <li>Entry Fee is not refundable.</li>
+        <li> E-ticket cancellations are not permitted.</li>
+        <li><b>The Monument is open for visitors between sunrise and sunset.</b></li>
+        <li>Visitor shall be required to show photo identity proof in original at the entry to the monument.</li>
+        <li> Edibles are not allowed inside the monument.</li>
+        <li>Inflammable/dangerous/explosive articles are not allowed.</li>
+        <li> The entry to the monument will be closed 30 minutes prior to the closing time of the monument. </li>
+    </ol>
+    <img align="right" src="end.jpg" class="end"> <br><br>
+    
+    <input type='button' class='btn' id='download' name='download' value='Download' onclick='window.print()' />
+    </div>
+    </div>
+    </div>
+    
+    </body>
                 </html>`;
 
     let flyWindow = window.open(
