@@ -1,17 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
 body {
   background-image: linear-gradient(180deg,#2b8fec, #cce6ff);
     background-attachment: fixed;
+    font-family: 'Josefin Sans', sans-serif;
   }
-#monument-img {
+.topnav {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 200px;
+  background-color: #cce6ff;
+
+}
+#monument-img{
     max-width: 1000px;
     margin: 20px auto;
 }
 
-#monument-img img {
+#monument-img img{
+    margin-left: 20px;
     width: 100%;
     height: auto;
 }
-
 #timeline {
     /* background-color: rgb(230, 230, 230); */
     display: flex;
@@ -19,12 +29,29 @@ body {
 }
 
 .style-div {
-    background-color: darkgray;
+  position: center;
+  top: 10px;
+  right: 0;
+  border: none;
+  padding: 1px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+    
 } 
 
 .style-div p {
-    padding: 5px;
+    padding: 1px;
+    color: white;
     font-size: 1.2rem;
+}
+
+.style-div p a{
+  color: white;
 }
 .style-div a {
     text-decoration: none;
@@ -33,7 +60,7 @@ body {
     text-decoration: none;
 }
 .style-div:hover {
-    background-color: crimson;
+    background-color:#2ea382;
     color: white;
 }
 
@@ -41,21 +68,29 @@ body {
     max-width: 1000px;
     margin: auto;
     padding-bottom: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    
 }
 
 #monument-information h2 {
-    font-family: sans-serif;
+    font-family:Arial;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #monument-information p{
     font-family: monospace;
     font-size: 1.1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#monument-information ul{
+  
+  font-size: 1.1rem;
 }
 #head-container {
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;
-    background-color: gainsboro;
+    background-color:rgb(207,204,204);
 }
 
 #head-container a img {
@@ -113,4 +148,10 @@ html::-webkit-scrollbar {
   }
   .bottom center a:hover {
     text-decoration: underline;
+  }
+  
+  .pickright{
+    float: right;
+    margin-top: 150px;
+    margin-left: 20px;
   }

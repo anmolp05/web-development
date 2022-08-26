@@ -28,11 +28,11 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="firstname" class="label-title">First name *</label>
-            <input type="text" id="firstname" class="form-input" required="required" autocomplete="off"/>
+            <input type="text" id="firstname" class="form-input" required="required" autocomplete="off" name = "firstname" />
           </div>
           <div class="form-group right">
-            <label for="lastname" class="label-title">Last name</label>
-            <input type="text" id="lastname" class="form-input" autocomplete="off"/>
+            <label for="lastname" class="label-title" >Last name</label>
+            <input type="text" id="lastname" class="form-input" autocomplete="off"name = "lastname"/>
           </div>
         </div>
 
@@ -40,11 +40,11 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="email" class="label-title">Email*</label>
-            <input type="email" id="email" class="form-input" required="required" autocomplete="off">
+            <input type="email" id="email" class="form-input" required="required" autocomplete="off" name="email">
           </div>
           <div class="form-group right">
             <label for="phone" class="label-title">Phone*</label>
-            <input type="phone" id="phone" class="form-input" required="required" autocomplete="off">
+            <input type="phone" id="phone" class="form-input" required="required" autocomplete="off" name="phone">
           </div>
         </div>
 
@@ -89,14 +89,14 @@
           <div class="form-group left" >
             <label for="proof" class="label-title">Select Slot</label>
             <select class="form-input" id="level">
-              <option value="DrivingLicence">Driving Licence</option>
-              <option value="PanCard">Pan Card</option>
-              <option value="VoterID">Voter Id</option>
+              <option name = "proofid" value="DrivingLicence">Driving Licence</option>
+              <option name = "proofid" value="PanCard">Pan Card</option>
+              <option name = "proofid" value="VoterID">Voter Id</option>
             </select>
           </div>
           <div class="form-group right">
             <label for="proof-id" class="label-title">Id Number</label>
-            <input type="text" class="form-input" id="proofID" required autocomplete="off">
+            <input type="text" class="form-input" id="proofID" required autocomplete="off"name="proofno">
           </div>
         </div>
       </div>

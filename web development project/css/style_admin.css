@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Baloo Da 2', cursive;
+} */
+
+.bg-commom {
+	background: rgba(239, 255, 253, 0.6)!important;
+}
+
+.bg-right {
+	background: #B8FFF9 !important;
+}
+
+.nav-link, .breadcrumb-item {
+	padding: 10px 0 10px 30px;
+	transition: all .2s;
+	color: #707177;
+}
+
+.nav-link:hover, .breadcrumb-item a {
+	color: #42C2FF !important;
+	text-decoration: none;
+}
+
+.card {
+	box-shadow: 0 0 8px 2px rgba(250, 250, 250, 0.8) !important;
+}
+
+.card-left {
+	border-radius: 5px;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #2b9098 0,
+      #2b9098 1px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 5px 5px;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: inset 1px 1px 5px black;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    border-radius: 5px;
+    border: 3.5px solid black;
+    box-shadow: inset 1px 1px 5px black;
+  }
+  
+  /* custom scroll bar completed */
+  
